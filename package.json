@@ -1,0 +1,32 @@
+{
+  "author": {
+    "name": "xh4528"
+  },
+  "bugs": {
+    "url": "https://github.com/xh4528/xh-regex-replace-loader/issues"
+  },
+  "dependencies": {
+    "loader-utils": "^1.1.0"
+  },
+  "description": "Modify by James Abney , A webpack loader to replace values in files using regex",
+  "files": [
+    "index.js"
+  ],
+  "homepage": "https://github.com/xh4528/xh-regex-replace-loader",
+  "keywords": [
+    "webpack",
+    "loader",
+    "regex",
+    "regular",
+    "expressions",
+    "replace"
+  ],
+  "license": "MIT",
+  "main": "./index.js",
+  "name": "@xh/regex-replace-loader",
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com:xh4528/xh-regex-replace-loader.git"
+  },
+  "version": "1.0.1"
+}
