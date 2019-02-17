@@ -1,7 +1,32 @@
+Example work in Vue.
 
-Modify by James Abney
-https://github.com/jabney/regex-replace-loader
+### webpack.config.js
+```javascript
+module.exports = {
+  ...,
+  module: {
+    rules: [{
+      test: /\.vue$/,
+      use: {
+        loader: 'xh-regex-replace-loader',
+        options: {
+          enable: process.env.NODE_ENV === 'production',
+          regex: /href=["|'](.+?).html["|']/,     // can also be a RegExp object (required)
+          flags: 'gi'        // ignored if a RegExp is used (optional)
+          value: function (match) {
+            // modify all href="/xxx.html"  to href="/xxx"
+            return match[0].replace('.html', '')
+          },
+          'vue-loader',
+        }
+      }
+    }]
+  }
+}
+```
 
+Modify from James Abney  
+regex-replace-loader  https://github.com/jabney/regex-replace-loader
 
 
 regex-replace-loader
